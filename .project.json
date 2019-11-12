@@ -13,6 +13,11 @@
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Thu, 31 Oct 2019 18:30:17 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Thu, 07 Nov 2019 21:14:20 GMT"
     }
   ],
   "translation": {
@@ -39,6 +44,18 @@
     "sourceFolder": "webapp",
     "targetFolder": "dist",
     "excludedFolders": [],
-    "excludedFiles": []
+    "excludedFiles": [],
+    "lastBuildDateTime": "Wed, 06 Nov 2019 19:42:34 GMT"
+  },
+  "deploy": {
+    "destination": "ED1",
+    "name": "ZAPP_FIORI_TEST"
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZCDS_COMIS_ASESOR_CDS",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
   }
 }

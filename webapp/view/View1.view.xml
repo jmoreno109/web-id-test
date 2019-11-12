@@ -2,12 +2,24 @@
 	xmlns="sap.m">
 	<App>
 		<pages>
-			<Page title="{i18n>title}">
+			<Page title="{i18n>title}" class="sapUiContentPadding">
 				<content>
-					
-				
-					
-					
+					<Table items="{ path: 'modelPath>/arrayName' }">
+						<columns>
+							<Column><Text text="Name"/></Column>
+							<Column><Text text="Age"/></Column>
+							<Column></Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{modelPath>firstName} {modelPath>lastName}"/>
+									<Text text="{modelPath>age} years"/>
+									<Button press="rowClicked" icon="sap-icon://hint"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
 				</content>
 			</Page>
 		</pages>

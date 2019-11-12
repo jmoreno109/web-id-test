@@ -1,0 +1,29 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZCDS_COMIS_ASESOR_CDS" xml:lang="es" sap:schema-version="1">
+            <EntityType Name="ZCDS_COMIS_ASESORType" sap:label="Comisiones por asesor" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="bukrs"/>
+                    <PropertyRef Name="butxt"/>
+                </Key>
+                <Property Name="bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Sociedad"/>
+                <Property Name="butxt" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Nombre empresa" sap:quickinfo="Denominación de la sociedad o empresa"/>
+            </EntityType>
+            <EntityContainer Name="ZCDS_COMIS_ASESOR_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZCDS_COMIS_ASESOR" EntityType="ZCDS_COMIS_ASESOR_CDS.ZCDS_COMIS_ASESORType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZCDS_COMIS_ASESOR_CDS/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZCDS_COMIS_ASESOR_CDS/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
